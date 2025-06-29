@@ -23,21 +23,27 @@ function App() {
     PasswordEvaluation | undefined
   >();
 
+  const [loading, setLoading] = useState<boolean>(false);
+
   const handleGeneratePassword = () => {
-    setPassword(getPasswordGenerated(config));
-    setEvaluation(getPasswordEvaluation(config));
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setPassword(getPasswordGenerated(config));
+      setEvaluation(getPasswordEvaluation(config));
+    }, 1500);
   };
 
   return (
     <div className="font-['JetBrains_Mono',_monospace] font-bold text-base/5">
       <main className="min-h-screen flex flex-col justify-center items-center gap-4 p-4">
         <h1 className="text-base/5 text-gray-600">Password Generator</h1>
-        <OutputPassword password={password} />
+        <OutputPassword loading={loading} password={password} />
         <Settings>
           <SettingsLength config={config} setConfig={setConfig} />
           <SettingsInclusions config={config} setConfig={setConfig} />
           <Strength evaluation={evaluation} />
-          <GenerateCta onClick={handleGeneratePassword} />
+          <GenerateCta loading={loading} onClick={handleGeneratePassword} />
         </Settings>
       </main>
     </div>
