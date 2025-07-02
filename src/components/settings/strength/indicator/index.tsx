@@ -11,8 +11,12 @@ export const StrengthIndicator = ({ value }: StrengthIndicatorProps) => {
         <div
           key={index}
           className={
-            "border-2 border-primary h-[28px] w-[10px]" +
-            `${index < value ? " bg-primary" : ""}`
+            "h-[28px] w-[10px]" +
+            `${
+              index < value
+                ? " bg-warning border-0"
+                : " border-2 border-gray-600"
+            }`
           }
         ></div>
       ))}

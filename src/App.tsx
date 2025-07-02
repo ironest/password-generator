@@ -29,7 +29,13 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      setPassword(getPasswordGenerated(config));
+      const newPassword = getPasswordGenerated(config);
+      if (newPassword.length === 0) {
+        setPassword("<Empty password>");
+      } else {
+        setPassword(newPassword);
+      }
+
       setEvaluation(getPasswordEvaluation(config));
     }, 1500);
   };
