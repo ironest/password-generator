@@ -14,9 +14,11 @@ export const SettingsLength = ({ config, setConfig }: SettingsLengthProps) => {
   };
 
   return (
-    <div className="flex justify-between flex-wrap gap-2 sm:gap-4">
-      <span>Character Length</span>
-      <span className="text-primary">{config.length}</span>
+    <div className="flex justify-between items-center flex-wrap gap-2 sm:gap-4">
+      <span className="sm:text-lg/6">Character Length</span>
+      <span className="text-primary text-2xl/8 sm:text-[32px]/[42px]">
+        {config.length}
+      </span>
       <input
         type="range"
         min="0"

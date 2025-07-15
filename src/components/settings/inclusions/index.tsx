@@ -26,7 +26,7 @@ export const SettingsInclusions = ({
       {config.inclusions.map(({ label, value, enabled }) => {
         return (
           <label
-            className="label flex gap-4 sm:gap-6 text-base-content"
+            className="label flex gap-4 sm:gap-6 text-base-content sm:text-lg/6"
             key={label}
           >
             <input

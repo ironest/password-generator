@@ -5,7 +5,7 @@ interface OutputProps {
 
 export const OutputPassword = ({ loading, password }: OutputProps) => {
   return (
-    <p className="flex justify-between items-center w-full bg-base-200 p-4 sm:py-5 sm:px-8 text-xl h-16 ">
+    <p className="flex justify-between items-center w-full bg-base-200 p-4 sm:px-8 text-2xl sm:text-[32px]/10 h-16 sm:h-20">
       {loading ? (
         <span className="loading loading-dots loading-xl text-gray-700" />
       ) : password ? (
