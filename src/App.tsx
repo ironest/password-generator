@@ -42,8 +42,8 @@ function App() {
 
   return (
     <div className="min-h-screen w-full flex justify-center items-center">
-      <main className="w-full sm:w-135 flex flex-col items-center gap-4 p-4">
-        <h1 className="text-base/5 text-gray-600 sm:text-2xl/8">
+      <main className="w-full sm:w-135 flex flex-col items-center gap-4 sm:gap-6 p-4">
+        <h1 className="text-base/5 text-gray-600 sm:text-2xl/8 sm:mb-2">
           Password Generators
         </h1>
         <OutputPassword loading={loading} password={password} />

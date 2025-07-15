@@ -19,14 +19,16 @@ export const SettingsLength = ({ config, setConfig }: SettingsLengthProps) => {
       <span className="text-primary text-2xl/8 sm:text-[32px]/[42px]">
         {config.length}
       </span>
-      <input
-        type="range"
-        min="0"
-        max="32"
-        value={config.length}
-        onChange={(e) => handleLengthChange(e)}
-        className="range text-primary [--size-selector:4px] [--range-bg:var(--color-base-300)] [--range-thumb:var(--color-base-300)] [--range-fill:1] active:[--range-thumb:var(--color-base-300)] w-full"
-      />
+      <label className="w-full">
+        <input
+          type="range"
+          min="0"
+          max="32"
+          value={config.length}
+          onChange={(e) => handleLengthChange(e)}
+          className="range text-primary [--size-selector:4px] [--range-bg:var(--color-gray-850)] [--range-thumb:var(--color-base-300)] [--range-fill:1] active:[--range-thumb:var(--color-base-300)] w-full"
+        />
+      </label>
     </div>
   );
 };

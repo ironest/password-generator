@@ -4,7 +4,7 @@ interface SettingsProps {
 
 export const Settings = ({ children }: SettingsProps) => {
   return (
-    <div className="w-full flex flex-col gap-8 bg-base-200 p-4 sm:pt-6 sm:pb-16 sm:px-8">
+    <div className="w-full flex flex-col gap-8 bg-base-200 p-4 sm:pt-6 sm:pb-16 sm:px-8 md:pb-10">
       {children}
     </div>
   );
