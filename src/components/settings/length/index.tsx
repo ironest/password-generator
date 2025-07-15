@@ -15,20 +15,21 @@ export const SettingsLength = ({ config, setConfig }: SettingsLengthProps) => {
 
   return (
     <div className="flex justify-between items-center flex-wrap gap-2 sm:gap-4">
-      <span className="sm:text-lg/6">Character Length</span>
+      <label htmlFor="password-length" className="sm:text-lg/6">
+        Character Length
+      </label>
       <span className="text-primary text-2xl/8 sm:text-[32px]/[42px]">
         {config.length}
       </span>
-      <label className="w-full">
-        <input
-          type="range"
-          min="0"
-          max="32"
-          value={config.length}
-          onChange={(e) => handleLengthChange(e)}
-          className="range text-primary [--size-selector:4px] [--range-bg:var(--color-gray-850)] [--range-thumb:var(--color-base-300)] [--range-fill:1] active:[--range-thumb:var(--color-base-300)] w-full"
-        />
-      </label>
+      <input
+        id="password-length"
+        type="range"
+        min="0"
+        max="32"
+        value={config.length}
+        onChange={(e) => handleLengthChange(e)}
+        className="range text-primary [--size-selector:4px] [--range-bg:var(--color-gray-800)] [--range-thumb:var(--color-base-300)] [--range-fill:1] active:[--range-thumb:var(--color-base-300)] w-full"
+      />
     </div>
   );
 };
